@@ -23,6 +23,9 @@ Thumbs.db
 .vscode/
 .idea/
 
+# GitHub config
+.github/
+
 # Cache
 .cache/
 

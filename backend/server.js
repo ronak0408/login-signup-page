@@ -8,11 +8,11 @@ const authRoutes = require('./routes/auth');
 const app = express();
 
 // middleware
-app.use(cors());
-app.use(express.json());
-
-// connect to mongodb
-mongoose.connect(process.env.MONGO_URI)
+app.use(cors({
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
     .then(() => console.log('Connected to MongoDB'))
     .catch((err) => console.log('MongoDB connection error:', err));
 

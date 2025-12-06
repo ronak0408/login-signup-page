@@ -35,7 +35,7 @@ function Signup({ onLogin }) {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/signup', {
+      const response = await axios.post('https://login-signup-page-6bzr.onrender.com/api/auth/signup', {
         name,
         email,
         password
